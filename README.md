@@ -14,7 +14,12 @@ ghost install local
 ln -s ../content content
 ```
 
-Now you need to ensure that the repo: https://github.com/carlosbaraza/blog-theme is cloned to `./content/themes/blog-theme`.
+Now you need to ensure that the submodule: https://github.com/carlosbaraza/blog-theme is initialized to `./content/themes/blog-theme`.
+
+```bash
+# Init blog-theme submodule
+git submodule update --init
+```
 
 When changes are made to the blog theme, you have to commit them to that
 sub repository. The reason for this is that it will make it easier to update
