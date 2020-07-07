@@ -2,10 +2,21 @@
 
 ## Development
 
+In one terminal:
+
 ```sh
 nvm use 12
 cd server
 ghost start
+```
+
+On another terminal:
+
+```sh
+nvm use 12
+cd content/themes/blog-theme
+npm i
+npm run dev
 ```
 
 ## Development (Initial setup)
