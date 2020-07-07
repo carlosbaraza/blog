@@ -2,6 +2,14 @@
 
 ## Development
 
+```sh
+nvm use 12
+cd server
+ghost start
+```
+
+## Development (Initial setup)
+
 Install ghost in the local server folder and symlink to content folder.
 
 ```sh
