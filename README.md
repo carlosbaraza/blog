@@ -70,6 +70,13 @@ mkdir -p /opt/carlosbaraza.com/ghost/content
 # origin certificates are configured in the future
 dokku config:set carlosbaraza.com url=http://carlosbaraza.com
 
+# Setup SSL certificate
+# Cloudflare offers a free end-to-end SSL certificate. You need to set SSL config to full and download private and public keys from the dashboard. To install certificates on your Dokku NGINX run the following commands:
+# vim carlosbaraza.com.crt (similar than .pem)
+# vim carlosbaraza.com.key
+tar cvf carlosbaraza.com.certificates.tar carlosbaraza.com.crt carlosbaraza.com.key
+dokku certs:add carlosbaraza.com < carlosbaraza.com.certificates.tar
+
 # Add domain
 dokku domains:add carlosbaraza.com carlosbaraza.com
 
