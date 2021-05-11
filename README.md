@@ -50,6 +50,13 @@ Admin UI: http://localhost:2368/ghost
 User: admin@admin.com
 Password: 2rL4@TXd5L@8cqDb
 
+## Updating Ghost
+```
+docker pull ghost:latest
+docker tag ghost:latest dokku/carlosbaraza.com:latest
+dokku tags:deploy carlosbaraza.com latest
+```
+
 ## Initial Dokku deployment
 
 Deployed to dokku. Inspired by [this article](https://matthisk.com/running-ghost-publishing-on-dokku/):
